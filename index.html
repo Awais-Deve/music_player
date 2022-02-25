@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Music for everone</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="top">
+        <div class="image">
+          <img src="" alt="" />
+        </div>
+        <div class="music_info">
+          <span class="name">loading...</span>
+          <span class="artist">loading...</span>
+        </div>
+        <div class="progress_area">
+          <div class="progress_bar">
+            <span class="progress_btn"> </span>
+          </div>
+          <audio src=""></audio>
+        </div>
+        <div class="time_bar">
+          <span class="spended">0:00</span>
+          <span class="total">0:00</span>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="controls">
+          <i id="musicLoopBtn" class="fa-solid fa-repeat"></i>
+          <i id="previousBtn" class="fa-solid fa-angles-left"></i>
+          <div class="play_pause">
+            <i class="fa-solid fa-play"></i>
+          </div>
+          <i id="nextBtn" class="fa-solid fa-angles-right"></i>
+          <i id="musicListBtn" class="fa-solid fa-list"></i>
+        </div>
+      </div>
+      <div class="music_list">
+        <div class="top">
+          <i id="closeList" class="fa-solid fa-xmark " ></i>
+        </div>
+        <div class="main">
+          <ul>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="music-list.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

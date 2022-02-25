@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+body,
+html {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(244, 113, 127);
+  background: linear-gradient(
+    0deg,
+    rgba(244, 113, 127, 0.9332107843137255) 30%,
+    rgba(244, 113, 127, 0.9332107843137255) 40%,
+    rgba(244, 113, 127, 1) 50%,
+    rgba(244, 113, 127, 1) 64%
+  );
+}
+.app {
+  /* background:red; */
+  width: 350px;
+  height: 450px;
+  border-radius: 8px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  background-color: white;
+  display:flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.top {
+  padding: 12px 16px;
+  padding-bottom: 24px;
+  border-bottom:1px solid rgba(0, 0, 0, 0.323);
+  border-radius: 8px;
+}
+.image {
+  padding: 8px;
+  overflow: hidden;
+  width: 100%;
+  height:256px;
+  overflow: hidden;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  border-radius: 12px;
+}
+.image img {
+  border-radius: 12px;
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+}
+.music_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8px;
+}
+.music_info .name {
+  font-weight: 900;
+  font-size: 24px;
+  text-transform: capitalize;
+}
+.progress_area {
+  margin-top: 16px;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.123);
+  height: 4px;
+  cursor:pointer;
+}
+.progress_bar {
+  position: relative;
+  width: 0%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    180deg,
+    rgba(244, 113, 127, 0.8603816526610644) 0%,
+    rgba(244, 113, 127, 0.927608543417367) 50%
+  );
+}
+.progress_btn {
+  display: none;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border:1px solid #f4717f;
+  background-color: #fff;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  position: absolute;
+  top: -3px;
+  right: -4px;
+}
+.progress_area:hover .progress_btn{
+    display:inline-block;
+}
+.time_bar{
+    display:flex;
+    justify-content:space-between;
+    font-size: 12px;
+    margin-top: 2px;
+}
+.bottom{
+    margin-top:auto;
+    padding:0 16px;
+    padding-bottom: 16px;
+}
+.controls{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size: 20px;
+}
+.controls *{
+    cursor:pointer;
+    color:#222222;
+}
+.music_list{
+    display: none;
+    position:absolute;
+    left:0;
+    bottom:0;
+    background-color:#fff;
+    width:100%;
+    z-index: 10;
+    max-height:350px;
+    overflow-y: scroll ;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    color:#222222;
+}
+.music_list.show{
+  display: block;
+}
+.music_list::-webkit-scrollbar{
+    width:0;
+}
+.music_list .top{
+    padding:4px 16px;
+    text-align:  end;
+    border:1px solid rgba(0, 0, 0, 0.223);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-left: none;
+    border-right:none;
+    position:sticky;
+    top:0;
+    background-color: #fff;
+}
+#closeList{
+    cursor: pointer;
+    color:#222222;
+}
+.music_list .main{
+    padding:12px 0px;
+}
+
+ul li{
+    list-style: none;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-bottom: 6px;
+    padding:0 24px;
+    padding-bottom:6px;
+    border-bottom:1px solid rgba(0, 0, 0, 0.223);
+    cursor: pointer;
+}
+ul li:last-child{
+    margin-bottom: 0;
+    padding-bottom:0;
+    border-bottom: 0;
+}
+li.playing{
+  background-color: #f4717e2b;
+  user-select:none;
+  cursor:default;
+}
+li .left{
+    display: flex;
+    flex-direction:column;
+}
+li .left .name{
+    font-weight:700;
+    font-size: 16px;
+}
+li .left .artist{
+    font-size: 12px;
+}
+li .right{
+    font-size:12px;
+}
